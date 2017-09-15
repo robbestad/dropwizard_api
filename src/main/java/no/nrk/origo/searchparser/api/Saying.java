@@ -33,7 +33,7 @@ public class Saying {
     public String toString() {
         return MoreObjects.toStringHelper(this)
                 .add("id", id)
-                .add("content", content)
+                .add("greeting", content)
                 .toString();
     }
 }
