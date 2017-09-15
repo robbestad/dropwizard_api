@@ -8,15 +8,15 @@ public class Saying {
     private long id;
 
     @Length(max = 3)
-    private String content;
+    private String greeting;
 
     public Saying() {
         // Jackson deserialization
     }
 
-    public Saying(long id, String content) {
+    public Saying(long id, String greeting) {
         this.id = id;
-        this.content = content;
+        this.greeting = greeting;
     }
 
     @JsonProperty
@@ -25,15 +25,15 @@ public class Saying {
     }
 
     @JsonProperty
-    public String getContent() {
-        return content;
+    public String getGreeting() {
+        return greeting;
     }
 
     @Override
     public String toString() {
         return MoreObjects.toStringHelper(this)
                 .add("id", id)
-                .add("greeting", content)
+                .add("greeting", greeting)
                 .toString();
     }
 }
